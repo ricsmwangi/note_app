@@ -1,0 +1,20 @@
+# Build artifacts
+*.o
+*.a
+*.so
+
+# Database files
+notes.db
+notes.tmp
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# System
+*.dSYM/
+vgcore.*
