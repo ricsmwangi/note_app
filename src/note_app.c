@@ -95,7 +95,7 @@ static void edit_note(FILE *fp) {
     while (getchar()!='\n'&&EOF);
     Note n; long pos;
     if (!load_note(fp, id, &n, &pos)) { printf("Not found.\n"); return; }
-    printf("Current title: %s\nNew title (leave empty to keep): ");
+    printf("Current title: %s\nNew title (leave empty to keep): ", n.title);
     char t[MAX_TITLE]; if (!read_line(t, sizeof t)) return; if (t[0]) { strncpy(n.title, t, sizeof n.title - 1); n.title[sizeof n.title - 1] = '\0'; }
     printf("Edit body? (y/N): "); char c='n'; if (scanf(" %c", &c)!=1) c='n'; while (getchar()!='\n'&&EOF);
     if (c=='y' || c=='Y') {
